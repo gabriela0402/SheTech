@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #131842;
+    --color-primary-light: #282F6E;
+    --salmon: #E68369;
+    --salmon-secundary: #ecceae;
+    --marfin: #fbf6e2;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842;
+    --color-danger-variant: rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: #000;
+    
+    --container-width-lg: 76%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+
+    --transition: all 400ms ease;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    color: var(--color-white);
+    background: var(--color-primary);
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+h1, h2, h3, h4, h5 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+a {
+    color: var(--color-white);
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+
+/* ======================== NAVBAR ============================ */
+
+nav {
+    background-color:#e68269da;
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+}
+
+/* Mudar o navbar css quando mexer usando JS */
+.window-scroll {
+    background: var(--salmon);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.nav-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav button {
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nav-menu a {
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--color-primary);
+}
+
+/* ======================== HEADER ============================ */
+
+header {
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    height: 70vh;
+    margin-top: 1rem;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+}
+
+.header-left p {
+    margin: 1rem 0 2.4rem;
+}
+
+.header-right-img{
+    background-color: rgba(255, 255, 255, 0.062);
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+.header-right-img:hover{
+    background: transparent;
+}
+/* ====================== EVENTOS ========================= */
+
+.eventos {
+    height: 50rem;
+}
+
+.eventos h1 {
+    line-height: 1;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+}
+
+.eventos-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.eventos-left {
+    margin-right: 4rem;
+}
+
+.eventos-left p {
+    margin: 1rem 0 3rem;
+}
+
+.eventos-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    margin-top: 5rem;
+    height: 20px;
+}
+
+.eventos-bloco {
+    background-color: var(--salmon);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+    width: 500px;
+}
+
+.eventos-bloco:hover {
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.eventos-icons {
+    background: var(--color-primary-light);
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+    width: 50px;
+    height: 50px;
+}
+
+.eventos h5 {
+    margin: 2rem 0 1rem;
+}
+
+.eventos p {
+    font-size: 0.85rem;
+}
+
+.negrito{
+    font-weight: bold;
+}
+
+/* END EVENTOS */
+
+/* ========================= WHAT DO WE DO ========================= */
+
+.parceiros{
+    margin-top: 10rem;
+}
+
+.parceiros-container {
+    margin: 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.topicos {
+    background: var(--salmon);
+    text-align: center;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.topicos:hover {
+    background: transparent;
+    border-color: var(--color-primary-light);
+}
+
+.topico-info {
+    padding: 2rem;
+}
+
+.topico-info p {
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+.topico-img{
+ width: 500px;
+ height: 500px;
+ border-radius: 70%;   
+}
+
+
+/* ========================= HISTÓRIAS DE SUCESSO ========================= */
+
+.historias_container{
+    overflow-x: hidden;
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.historias{
+    padding-top: 2rem;
+}
+
+.avatar{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    overflow:hidden;
+    margin: 0 auto 1rem;
+    border: 8px solid var(--salmon-secundary);
+}
+
+.historias_info{
+    text-align: center;
+}
+
+.historias_body{
+    background-color: #E68369;
+    padding: 2rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.historias_body::before{
+    content: "";
+    display: block;
+    background-color: #E68369;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 50%;
+    top: -1.5rem;
+    transform: rotate(45deg);
+}
+
+
+
